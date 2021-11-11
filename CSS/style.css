@@ -1,5 +1,7 @@
 body {
     font-size: 200%;
+    color: #191724;
+    font-family: 'Quicksand', sans-serif;
 }
 
 .left {
@@ -22,7 +24,7 @@ body {
 
 }
 
-.rightflex_row{
+.rightflex_row {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -39,19 +41,28 @@ nav {
     
 }
 
+a {
+    text-decoration: none;
+}
+
 #main {
     margin-left: 10%;
 }
 
-nav.flexcontainer {
-    top: auto;
+nav div.flexcontainer {
+    margin-top: 10%;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
 
 }
 
-
+img.avatar {
+    border-radius: 50%;
+    width: 10%;
+    vertical-align: middle;
+    margin-left: 5%;
+}
 
 #main {
     font-size: 140%;
@@ -61,8 +72,46 @@ nav.flexcontainer {
 .contact {
     width: 30%;
     height: 30%;
-    background-color: #c4a7e7;
     text-align: center;
+    background-color: #c4a7e7;
 
-    
+}
+
+.contactinfo_container {
+    font-size: 0.5em;
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.greenbackground {
+    background-color: #3e8fb0;
+}
+.greybackground {
+    background-color: #555169;
+}
+
+button {
+    color: #fffaf3;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 60%;
+}
+
+.contactinfo_container form input, button {
+    margin-top: 4%;
+}
+
+.contactinfo_container > form input{
+    width: 90%;
+}
+
+form button {
+    background: none;
+	color: inherit;
+    cursor: pointer;
+    text-align: center;
+    border: none;
 }
