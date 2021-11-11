@@ -1,44 +1,41 @@
 body {
-    font-size: 200%;
+    font-size: 30px;
     color: #191724;
     font-family: 'Quicksand', sans-serif;
+
+}
+
+.allcontainer {
+    display: flex;
+    flex-direction: row;
+    position : absolute;
+    left:0%;
+    top: 0%;
+    width:100%;
+    height:100%;
+
+
 }
 
 .left {
-    position: fixed;
+
     background-color: #9ccfd8;
-    height: 100vh;
-    width: 30vw;
-    left: 0%;
-    top: 0%;
-    
-}
-
-.right {
-    background-color: #f2e9de;
-    position: fixed;
-    right: 0%;
-    top: 0%;
-    height: 100vh;
-    width:70vw;  
-
-}
-
-.rightflex_row {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    width: 100%;
     height: 100%;
-    position: absolute;
-    top: 20%;  
+    flex: 30%;
+    width: 100%;
+    min-height: max-content;
+    
+
 }
 
 nav {
-    position: absolute;
+    position: relative;
+    display:flex;
+    flex-flow: column wrap;
     top: 10%;
     width: 100%;
-    
+    align-items: center;
+
 }
 
 a {
@@ -46,16 +43,40 @@ a {
 }
 
 #main {
-    margin-left: 10%;
+    font-size: 200%;
+    align-self: flex-start;
 }
 
-nav div.flexcontainer {
-    margin-top: 10%;
+.right {
+    background-color: #f2e9de;
+    height: 100%;
+    flex:70%;  
+
+
+}
+
+.rightflex_row {
     display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    height: 70%;
+    justify-content:space-around;
+    flex-flow: row wrap;
+    position: relative;
+    top:30%;
+    width: 100%;
 
 }
+
+.contact {
+    text-align: center;
+    background-color: #c4a7e7;
+    padding: 3%;
+    height: fit-content;
+    max-width: max-content;
+}
+
+
+
+
 
 img.avatar {
     border-radius: 50%;
@@ -65,20 +86,13 @@ img.avatar {
 }
 
 #main {
-    font-size: 140%;
     align-items: flex-start;
 }
 
-.contact {
-    width: 30%;
-    height: 30%;
-    text-align: center;
-    background-color: #c4a7e7;
 
-}
 
 .contactinfo_container {
-    font-size: 0.5em;
+    
     margin-top: 5%;
     margin-left: 5%;
 }
@@ -92,6 +106,9 @@ img.avatar {
 
 button {
     color: #fffaf3;
+    min-width: max-content;
+    width: 5%;
+    height: 3vh;
 }
 
 form {
@@ -100,6 +117,9 @@ form {
     width: 60%;
 }
 
+input {
+    height: 5vh;
+}
 .contactinfo_container form input, button {
     margin-top: 4%;
 }
@@ -114,4 +134,52 @@ form button {
     cursor: pointer;
     text-align: center;
     border: none;
+    
+}
+
+@media screen and (max-width: 1024px) {
+    
+
+    .allcontainer {
+        display: flex;
+        flex-direction: column;
+        position : absolute;
+        left:0%;
+        top: 0%;
+        width:100%;
+        height:100%;
+        
+    }
+    .left {
+        font-size: 3vw;
+        background-color: #9ccfd8;
+        height: max-content;
+        flex:none;
+        width: 100%;
+  
+    
+    }
+    .rightflex_row {
+        display: flex;
+        height: auto;
+        min-height: 70%;
+        justify-content:space-around;
+        flex-flow: row wrap;
+        position:relative;
+        top: 0;
+        width: 100%;
+    
+    }
+
+    nav {
+        position: relative;
+        display:flex;
+        flex-flow: row wrap;
+        justify-content:space-around;
+        top: 10%;
+        width: 100%;
+        align-items: center;
+ 
+    
+    }
 }
